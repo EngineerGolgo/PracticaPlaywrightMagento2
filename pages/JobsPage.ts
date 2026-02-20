@@ -68,7 +68,7 @@ async addNewJob() {
   }
 
   async editJob() {
-await expect(this.page.getByText(/PruebaAuto/i).first()).toBeVisible({ timeout: 20000 });
+  await expect(this.page.getByText(/PruebaAuto/i).first()).toBeVisible({ timeout: 20000 });
 
   const firstEditLink = this.page.getByRole('link', { name: 'Edit' }).first();
   await expect(firstEditLink).toBeVisible({ timeout: 15000 });
@@ -91,7 +91,7 @@ await expect(this.page.getByText(/PruebaAuto/i).first()).toBeVisible({ timeout: 
   }
 
   async deleteJob() {
-      await expect.soft(this.page.getByText(/PruebaAutoEditada/i)).toBeVisible({ timeout: 20000 });
+      await expect(this.page.getByText(/PruebaAutoEditada/i).first()).toBeVisible({ timeout: 20000 });
       const firstEditLink = this.page.getByRole('link', { name: 'Edit' }).first();
       await expect(firstEditLink).toBeVisible({ timeout: 15000 });
       await firstEditLink.click();

@@ -45,6 +45,7 @@ export class CatalogPage {
     await this.page.waitForLoadState('networkidle');
   }
 
+
 async clickAddNewProduct() {
   await this.page.evaluate(() => {
     const toggleBtn = document.querySelector(

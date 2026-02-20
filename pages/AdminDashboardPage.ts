@@ -6,7 +6,7 @@ export class AdminDashboardPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.sidebarMenu = page.locator('.admin__menu'); // Barra lateral izquierda
+    this.sidebarMenu = page.locator('.admin__menu');
   }
 
   async verifyCintaOpciones() {
